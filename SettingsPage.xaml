@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            x:Class="Ocad.Gnss.SettingsPage" Title="Settings">
+    <ScrollView>
+        <VerticalStackLayout Padding="10">
+            <Label Text="Update Rate (ms)" FontAttributes="Bold" />
+            <Entry x:Name="UpdateIntervalEntry" Keyboard="Numeric" />
+
+            <Label Text="Filter" FontAttributes="Bold" />
+            <Picker x:Name="FilterPicker">
+                <Picker.Items>
+                    <x:String>None</x:String>
+                    <x:String>Smoothing</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Smoothing Strength (0-1)" FontAttributes="Bold" />
+            <Entry x:Name="AlphaEntry" Keyboard="Numeric" />
+
+            <Label Text="Satellite Count - Good" FontAttributes="Bold" />
+            <Entry x:Name="SatGoodEntry" Keyboard="Numeric" />
+
+            <Label Text="Satellite Count - Excellent" FontAttributes="Bold" />
+            <Entry x:Name="SatExcellentEntry" Keyboard="Numeric" />
+
+            <Label Text="C/N0 Weak (dBHz)" FontAttributes="Bold" />
+            <Entry x:Name="Cn0WeakEntry" Keyboard="Numeric" />
+
+            <Label Text="C/N0 Moderate (dBHz)" FontAttributes="Bold" />
+            <Entry x:Name="Cn0ModerateEntry" Keyboard="Numeric" />
+
+            <Label Text="C/N0 Strong (dBHz)" FontAttributes="Bold" />
+            <Entry x:Name="Cn0StrongEntry" Keyboard="Numeric" />
+
+            <Label Text="Accuracy - Excellent (m)" FontAttributes="Bold" />
+            <Entry x:Name="AccuracyExcellentEntry" Keyboard="Numeric" />
+
+            <Label Text="Accuracy - Good (m)" FontAttributes="Bold" />
+            <Entry x:Name="AccuracyGoodEntry" Keyboard="Numeric" />
+
+            <Label Text="Accuracy - Low limit (m)" FontAttributes="Bold" />
+            <Entry x:Name="AccuracyEntry" Keyboard="Numeric" />
+
+            <Button Text="Apply" Clicked="OnApplyClicked" Margin="0,20,0,0" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
